@@ -1,5 +1,6 @@
-import { Component,Renderer2, ElementRef, ComponentFactoryResolver, ViewChild, ViewContainerRef } from '@angular/core';
+import { Component,Renderer2, ElementRef } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
@@ -16,11 +17,11 @@ export class SidebarComponent {
 
   panelOpenState = false;
 
-  constructor(private _formBuilder: FormBuilder, private renderer: Renderer2, private el:ElementRef,private componentFactoryResolver: ComponentFactoryResolver) {}
+  constructor(private _formBuilder: FormBuilder, private renderer: Renderer2, private el:ElementRef, private route: Router) {}
 
   
-  save(){
-    
+  navegador(ruta:string){
+    this.route.navigate([ruta]);
   }
 
 

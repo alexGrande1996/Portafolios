@@ -3,13 +3,13 @@
     <mat-sidenav-container class="example-container">
         
         
-        <mat-sidenav #sidenav mode="side" opened class="example-sidenav" [fixedInViewport]="options.value.fixed" [fixedTopGap]="options.value.top" [fixedBottomGap]="options.value.bottom">
+        <mat-sidenav #sidenav mode="over" opened class="example-sidenav" [fixedInViewport]="options.value.fixed" [fixedTopGap]="options.value.top" [fixedBottomGap]="options.value.bottom">
             <!-- {{options.value.fixed ? 'Fixed' : 'Non-fixed'}}  -->
           <div class="marcoInterno">
-            <div class="cajonTitulo"><h1>Menu<hr></h1></div>
+            <div class="cajonTitulo"><h1  (click)="sidenav.toggle()">Menu<hr></h1></div>
             <div class="seciones">
 
-              <div class="marcoPrimeraSecion" style="background-color: red;">
+              <div class="marcoPrimeraSecion" style="background-color: red; " (click)="navegador('info')">
                 <mat-icon>menu</mat-icon><span >Galeria</span>
               </div>
               <div class="marcoSegundaSecion"  style="background-color: blue;">
@@ -20,8 +20,8 @@
                 <mat-icon>menu</mat-icon><span>Galeria</span>
                 
               </div>
-              <div class="marcoCuartaSecion"  style="background-color: yellow;">
-                <mat-icon>menu</mat-icon><span>Galeria</span>
+              <div class="marcoCuartaSecion"  style="background-color: rgb(138, 138, 15);">
+                <mat-icon>menu</mat-icon><span>Envio solicitud</span>
               
               </div>
               
@@ -72,10 +72,7 @@
             </div>
         </nav>
 
-        <ng-container #dynamicComponentContainer></ng-container>
-
-        <ng-template #componentA></ng-template>
-
+      
        
 
         <!-- <mat-sidenav-content [formGroup]="options">
@@ -106,9 +103,6 @@
         <!-- <mat-toolbar class="example-footer">Footer</mat-toolbar> -->
     </mat-sidenav-container>
   
-
-    
-    
 
 
 </ng-container>
