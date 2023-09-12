@@ -72,18 +72,18 @@
     </div>
   </nav>
   
-
+  <div>
+    <h1>Aplicación Principal</h1>
+  
+    <!-- Contenedor para cargar el componente secundario -->
+    <div *ngIf="mostrarComponente">
+      <app-info></app-info>
+  
+    </div>
+  
+    <!-- Botón para mostrar/ocultar el componente -->
+    <button (click)="toggleComponente()">Mostrar/Ocultar Componente</button>
+  </div>
 
 </mat-sidenav-container>
 
-<div>
-  <h1>Aplicación Principal</h1>
-
-  <!-- Contenedor para cargar el componente secundario -->
-  <div *ngIf="mostrarComponente">
-    <app-info></app-info>
-  </div>
-
-  <!-- Botón para mostrar/ocultar el componente -->
-  <button (click)="toggleComponente()">Mostrar/Ocultar Componente</button>
-</div>
