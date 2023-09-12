@@ -1,109 +1,89 @@
-<ng-container>
 
-    <mat-sidenav-container class="example-container">
+<mat-sidenav-container class="example-container">
         
         
-        <mat-sidenav #sidenav mode="over" opened class="example-sidenav" [fixedInViewport]="options.value.fixed" [fixedTopGap]="options.value.top" [fixedBottomGap]="options.value.bottom">
-            <!-- {{options.value.fixed ? 'Fixed' : 'Non-fixed'}}  -->
-          <div class="marcoInterno">
-            <div class="cajonTitulo"><h1  (click)="sidenav.toggle()">Menu<hr></h1></div>
-            <div class="seciones">
+  <mat-sidenav #sidenav mode="over" opened class="example-sidenav" [fixedInViewport]="options.value.fixed" [fixedTopGap]="options.value.top" [fixedBottomGap]="options.value.bottom">
+      <!-- {{options.value.fixed ? 'Fixed' : 'Non-fixed'}}  -->
+    <div class="marcoInterno">
+      <div class="cajonTitulo"><h1  (click)="sidenav.toggle()">Menu<hr></h1></div>
+      <div class="seciones">
 
-              <div class="marcoPrimeraSecion" style="background-color: red; " (click)="navegador('info')">
-                <mat-icon>menu</mat-icon><span >Galeria</span>
-              </div>
-              <div class="marcoSegundaSecion"  style="background-color: blue;">
-                <mat-icon>menu</mat-icon><span>Galeria</span>
-                
-              </div>
-              <div class="marcoTerceraSecion"  style="background-color: green;">
-                <mat-icon>menu</mat-icon><span>Galeria</span>
-                
-              </div>
-              <div class="marcoCuartaSecion"  style="background-color: rgb(138, 138, 15);">
-                <mat-icon>menu</mat-icon><span>Envio solicitud</span>
-              
-              </div>
-              
-            </div>
-            <div class="pie" style="background-color: rgb(0, 195, 255); height: 30px;">
-              <span class="info">Asociacion draco</span>
-            </div>
-          </div>
-
-
-
-            
-        </mat-sidenav>
+        <div class="marcoPrimeraSecion" style="background-color: red; " (click)="navegador('info'); sidenav.toggle()">
+          <mat-icon>menu</mat-icon><span >Galeria</span>
+        </div>
+        <div class="marcoSegundaSecion"  style="background-color: blue;" (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon><span>Comics</span>
+          
+        </div>
+        <div class="marcoTerceraSecion"  style="background-color: green;" (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon><span>Mangas</span>
+          
+        </div>
+        <div class="marcoCuartaSecion"  style="background-color: rgb(138, 138, 15);" (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon><span>Envio solicitud</span>
+        
+        </div>
+        
+      </div>
+      <div class="pie" style="background-color: rgb(0, 195, 255); height: 30px;">
+        <span class="info">Asociacion draco</span>
+      </div>
+    </div>
 
 
-
-
-        <nav>
-
-            <button mat-icon-button color="accent" aria-label="Example icon button with a menu icon" (click)="sidenav.toggle()">
-                <mat-icon>menu</mat-icon>
-              </button>
-
-            <div></div>
-            <div>
-                <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu"><mat-icon>more_vert</mat-icon>
-                </button>
-                <mat-menu #menu="matMenu">
-      
-                  <button mat-menu-item>
-                    <mat-icon>dialpad</mat-icon>
-                    <span>Redial</span>
-                  </button>
-      
-                  <button mat-menu-item disabled>
-                    <mat-icon>voicemail</mat-icon>
-                    <span>Check voice mail</span>
-                  </button>
-      
-                  <button mat-menu-item>
-                    <mat-icon>notifications_off</mat-icon>
-                    <span>Disable alerts</span>
-                  </button>
-      
-                </mat-menu>
-      
-                
-            </div>
-        </nav>
 
       
-       
-
-        <!-- <mat-sidenav-content [formGroup]="options">
-                <p><mat-checkbox formControlName="fixed">Fixed</mat-checkbox></p>
+  </mat-sidenav>
 
 
+  <nav>
 
-                <hr>
-                <p>
-                    <mat-form-field>
-                        <mat-label>Top gap</mat-label>
-                        <input matInput type="number" formControlName="top">
-                    </mat-form-field>
-                </p>
-
-                <hr>
-                <p>
-                    <mat-form-field>
-                        <mat-label>Bottom gap</mat-label>
-                        <input matInput type="number" formControlName="bottom">
-                    </mat-form-field>
-                </p>
-
-                <hr>
-                <p><button mat-button (click)="sidenav.toggle()">Toggle</button></p>
-        </mat-sidenav-content> -->
-
-        <!-- <mat-toolbar class="example-footer">Footer</mat-toolbar> -->
-    </mat-sidenav-container>
+    <button mat-icon-button color="accent" aria-label="Example icon button with a menu icon" (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+    </button>
+  
+    <div></div>
+    <div>
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu"><mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+  
+  
+          <button mat-menu-item>
+            <mat-icon>dialpad</mat-icon>
+            <span>Redial</span>
+          </button>
+  
+  
+          <button mat-menu-item disabled>
+            <mat-icon>voicemail</mat-icon>
+            <span>Check voice mail</span>
+          </button>
+  
+  
+          <button mat-menu-item>
+            <mat-icon>notifications_off</mat-icon>
+            <span>Disable alerts</span>
+          </button>
+  
+        </mat-menu>
+  
+        
+    </div>
+  </nav>
   
 
 
-</ng-container>
-  
+</mat-sidenav-container>
+
+<div>
+  <h1>Aplicación Principal</h1>
+
+  <!-- Contenedor para cargar el componente secundario -->
+  <div *ngIf="mostrarComponente">
+    <app-info></app-info>
+  </div>
+
+  <!-- Botón para mostrar/ocultar el componente -->
+  <button (click)="toggleComponente()">Mostrar/Ocultar Componente</button>
+</div>

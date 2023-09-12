@@ -25,4 +25,11 @@ export class SidebarComponent {
   }
 
 
+
+  mostrarComponente: boolean = false;
+
+  toggleComponente() {
+    this.mostrarComponente = !this.mostrarComponente;
+  }
+
 }
