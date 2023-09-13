@@ -1,0 +1,109 @@
+.carga{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+
+.example-container {
+    top: 0px;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+  
+  
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .example-sidenav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    background: rgb(246, 47, 110);
+    border-right: 5px solid rgba(0, 0, 0, 0.586);
+    color: white;
+  }
+  
+  
+  
+  .marcoInterno{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  
+  
+  
+  .cajonTitulo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;  
+  }
+  
+  .cajonTitulo h1{
+    padding: 0px;
+    margin: 0px;
+  
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+  
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  
+  hr{
+    border: 2px solid white;
+    align-self: center;
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  nav{
+    background-color: yellow;
+    height: 5vh;
+  }
+  
+  nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    position: relative;
+  }
+  
+  .seciones{
+      height: 100%;
+      padding: 0px 5px;
+  }
+  
+  .seciones div{
+    width: 100%;
+    height: 35px;  
+  
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 20px;
+    font-size: 20px;
+    border-bottom: 1px solid white;
+  }
+  
+  .pie{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+  }
+  
+  .pie span{
+    padding: 5px;
+  }
+  
+  

@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { InfoComponent } from './Componentes/info/info.component';
+import { VistaPrincipalComponent } from './Componentes/vista-principal/vista-principal.component';
 
 const routes: Routes = [
-  {path:"info", component:InfoComponent}
+  {path:"", component:VistaPrincipalComponent}
 ];
 
 @NgModule({

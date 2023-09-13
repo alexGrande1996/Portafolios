@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SidebarComponent } from './Componentes/sidebar/sidebar.component';
 
 
 import {MatListModule} from '@angular/material/list';
@@ -17,18 +16,30 @@ import {MatInputModule} from '@angular/material/input';
 import {NgIf} from '@angular/common';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { InfoComponent } from './Componentes/info/info.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatTreeModule} from '@angular/material/tree';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+
+
+import { VistaPrincipalComponent } from './Componentes/vista-principal/vista-principal.component';
+import { VistaCargaComponent } from './Componentes/vista-carga/vista-carga.component';
+import { VistaGaleriaComponent } from './Componentes/vista-galeria/vista-galeria.component';
+import { VistaComicsComponent } from './Componentes/vista-comics/vista-comics.component';
+import { VistaMangasComponent } from './Componentes/vista-mangas/vista-mangas.component';
+import { VistaEnvioSolicitudComponent } from './Componentes/vista-envio-solicitud/vista-envio-solicitud.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    SidebarComponent,
-    InfoComponent
+    VistaPrincipalComponent,
+    VistaCargaComponent,
+    VistaGaleriaComponent,
+    VistaComicsComponent,
+    VistaMangasComponent,
+    VistaEnvioSolicitudComponent
   ],
   imports: [
     MatSidenavModule,
@@ -51,7 +62,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatIconModule,
     MatMenuModule,
     MatTreeModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatProgressSpinnerModule
 
   ],
   providers: [],
