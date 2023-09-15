@@ -11,6 +11,8 @@ import { io } from 'socket.io-client';
 export class LoginComponent {
 
   private mostrarLogin = true;
+  private mostrarIcono = true;
+  public nombre = "text";
   private socket;
 
   constructor(
@@ -20,7 +22,7 @@ export class LoginComponent {
 
     ){
 
-    this.socket = io('http://localhost:3000/');
+    this.socket = io('http://192.168.0.13:3000/');
     this.socket.on("connect", () => {
    
       console.log(this.socket.id); // x8WIv7-mJelg7on_ALbx
@@ -55,6 +57,28 @@ export class LoginComponent {
       this.renderer.removeClass(barrera,'closed');
     }
     this.mostrarLogin = !this.mostrarLogin;
+  }
+
+  toggleIcono(){
+    const icono = this.el.nativeElement.querySelector('#icono-ojo');
+
+
+    if(this.mostrarIcono){
+      console.log('mostrar')
+      this.renderer.setProperty(icono,'type','text');
+      this.renderer.removeClass(icono,'bi-eye-slash-fill');
+      this.renderer.addClass(icono,'bi-eye-fill');
+          
+    }
+    else{
+      this.renderer.setProperty(icono,'type','password');
+      this.renderer.removeClass(icono,'bi-eye-fill');
+      this.renderer.addClass(icono,'bi-eye-slash-fill');
+          
+    }
+
+
+    this.mostrarIcono = !this.mostrarIcono;
   }
 
 }

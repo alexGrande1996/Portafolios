@@ -84,7 +84,7 @@
 .login .marco-cajas2{
     border-radius: 20px;
     background-color: rgb(255, 255, 255);
-    padding: 0px 40px;
+    padding: 0px 20px;
 }
 
 .login .marco-cajas .marco-cajas2 div {
@@ -100,7 +100,7 @@
     outline: none;
     width: 100%;
     position: relative;
-    padding: 0 15px 0 0;
+    padding: 5px 30px 5px 5px;
 }
 
 .login .marco-cajas .marco-cajas2 .password{
@@ -110,10 +110,15 @@
 .login .marco-cajas .marco-cajas2 div .icono{
     position: absolute;
     display: block;
-    width: 20px;
-    height: 20px;
+    
     right: 0;
-    top: 0;
+    top: 15%;
+
+
+    
+    font-size: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.134) ;
+    border-radius: 50%;
 
 }
 
@@ -127,10 +132,20 @@
     position: relative;
 }
 
+
+
 .b3{
     position: absolute;
     bottom: 0px;
     right: 0px;
+    width: 80px;
+    border-radius: 20px;
+}
+
+.b2{
+    position: absolute;
+    bottom: 0px;
+    right: 100px;
     width: 80px;
     border-radius: 20px;
 }
