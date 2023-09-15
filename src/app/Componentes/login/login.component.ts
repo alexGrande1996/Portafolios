@@ -1,6 +1,8 @@
 import { Component, ElementRef, Renderer2 } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import { io } from 'socket.io-client';
+import { Socket, io } from 'socket.io-client';
+import {HttpClient} from '@angular/common/http';
+
 
 
 @Component({
@@ -12,36 +14,47 @@ export class LoginComponent {
 
   private mostrarLogin = true;
   private mostrarIcono = true;
-  public nombre = "text";
-  private socket;
+  private mostrarIndicador = false;
+
+ 
 
   constructor(
       private _formBuilder: FormBuilder,
       private el:ElementRef,
-      private renderer:Renderer2
-
-    ){
-
-    this.socket = io('http://192.168.0.13:3000/');
-    this.socket.on("connect", () => {
-   
-      console.log(this.socket.id); // x8WIv7-mJelg7on_ALbx
+      private renderer:Renderer2,
+      private html:HttpClient
+    ){}
 
 
-      this.socket.emit('mensaje','Hola servidor');
+  ngOnInit() {
+      
+    this.html.get('assets/data.json').subscribe((data:any)=>{
+
+      const localhost = data['localhost'];
+      const port = data['port'];  
+
+      let ruta = `http://${localhost}:${port}/`;
+      const socket = io(ruta);
+
+        
+      socket.on("connect", () => {
+        this.toggleAviso(true);
+    
+        console.log(socket.id); // x8WIv7-mJelg7on_ALbx
+        socket.emit('mensaje','Hola servidor');
+      });
+
+      socket.on("disconnect",()=>{
+        this.toggleAviso(false);
+      });
+
+      socket.on('mensaje',(data:any)=>{
+        console.log(data);
+      });
+     
     });
-
-    this.socket.on('mensaje',(data)=>{
-      console.log(data);
-    });
-
 
   }
-
-
-
-  
-
 
   toggleLogin(){
     const login = this.el.nativeElement.querySelector('.login');
@@ -61,24 +74,35 @@ export class LoginComponent {
 
   toggleIcono(){
     const icono = this.el.nativeElement.querySelector('#icono-ojo');
+    const password = this.el.nativeElement.querySelector('#password');
 
 
     if(this.mostrarIcono){
-      console.log('mostrar')
-      this.renderer.setProperty(icono,'type','text');
+      this.renderer.setProperty(password,'type','text');
       this.renderer.removeClass(icono,'bi-eye-slash-fill');
       this.renderer.addClass(icono,'bi-eye-fill');
-          
     }
     else{
-      this.renderer.setProperty(icono,'type','password');
+      this.renderer.setProperty(password,'type','password');
       this.renderer.removeClass(icono,'bi-eye-fill');
       this.renderer.addClass(icono,'bi-eye-slash-fill');
-          
     }
-
-
     this.mostrarIcono = !this.mostrarIcono;
+
+  }
+
+  toggleAviso(valor:boolean){
+    this.mostrarIndicador = valor;
+    const indicador = this.el.nativeElement.querySelector('.indicador');
+
+    if(valor){
+      indicador.textContent  = "ON";
+      this.renderer.addClass(indicador,'indicadorEncendido');
+    }
+    else{
+      indicador.textContent  = "OFF";
+      this.renderer.removeClass(indicador,'indicadorEncendido');
+    }
   }
 
 }

@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {HttpClient,HttpClientModule} from '@angular/common/http';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,7 +17,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatInputModule} from '@angular/material/input';
 import {NgIf} from '@angular/common';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import {BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatTreeModule} from '@angular/material/tree';
@@ -31,6 +34,7 @@ import { VistaMangasComponent } from './Componentes/vista-mangas/vista-mangas.co
 import { VistaEnvioSolicitudComponent } from './Componentes/vista-envio-solicitud/vista-envio-solicitud.component';
 import { ChatComponent } from './Componentes/chat/chat.component';
 import { LoginComponent } from './Componentes/login/login.component';
+import { ConfiguracionComponent } from './Componentes/configuracion/configuracion.component';
 
 
 @NgModule({
@@ -43,7 +47,8 @@ import { LoginComponent } from './Componentes/login/login.component';
     VistaMangasComponent,
     VistaEnvioSolicitudComponent,
     ChatComponent,
-    LoginComponent
+    LoginComponent,
+    ConfiguracionComponent
   ],
   imports: [
     MatSidenavModule,
@@ -53,6 +58,7 @@ import { LoginComponent } from './Componentes/login/login.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     
     NgIf,
     MatToolbarModule,
