@@ -1,0 +1,154 @@
+.closed{
+    display: none;
+}
+
+.marco{
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.barrera{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.86);
+    z-index: -1;
+}
+
+.mostrar{
+    position: absolute;
+    z-index: 2;
+}
+
+.login{
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transition: top ease 1s;
+
+    border-radius: 30px;
+    border: 15px double rgb(255, 255, 255);
+
+    z-index: 1;
+
+    width: 500px; height: 300px ;
+    background-color: brown;
+    padding: 20px;
+
+
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+.login .titulo{
+    height: 40%;
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.login .titulo .texto{
+
+    display: block;
+    width: auto;
+    font-size: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+.login .marco-cajas{
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.login .marco-cajas2{
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    padding: 0px 40px;
+}
+
+.login .marco-cajas .marco-cajas2 div {
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.login .marco-cajas .marco-cajas2 div input{
+    background: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    outline: none;
+    width: 100%;
+    position: relative;
+    padding: 0 15px 0 0;
+}
+
+.login .marco-cajas .marco-cajas2 .password{
+    position: relative;
+}
+
+.login .marco-cajas .marco-cajas2 div .icono{
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    right: 0;
+    top: 0;
+
+}
+
+.login .marco-cajas .marco-cajas2 div input::placeholder{
+    color: rgb(0, 0, 0);    
+}
+
+.login .boton{
+    height: 30%;
+
+    position: relative;
+}
+
+.b3{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 80px;
+    border-radius: 20px;
+}
+
+.b1 {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: auto;
+    border-radius: 20px;
+}
+
+
+
+
+.login-cerrado{
+    top: -1200px;
+    margin: auto;
+    transition: top ease 0.5s;
+
+}

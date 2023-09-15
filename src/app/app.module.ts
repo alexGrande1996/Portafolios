@@ -29,6 +29,8 @@ import { VistaGaleriaComponent } from './Componentes/vista-galeria/vista-galeria
 import { VistaComicsComponent } from './Componentes/vista-comics/vista-comics.component';
 import { VistaMangasComponent } from './Componentes/vista-mangas/vista-mangas.component';
 import { VistaEnvioSolicitudComponent } from './Componentes/vista-envio-solicitud/vista-envio-solicitud.component';
+import { ChatComponent } from './Componentes/chat/chat.component';
+import { LoginComponent } from './Componentes/login/login.component';
 
 
 @NgModule({
@@ -39,7 +41,9 @@ import { VistaEnvioSolicitudComponent } from './Componentes/vista-envio-solicitu
     VistaGaleriaComponent,
     VistaComicsComponent,
     VistaMangasComponent,
-    VistaEnvioSolicitudComponent
+    VistaEnvioSolicitudComponent,
+    ChatComponent,
+    LoginComponent
   ],
   imports: [
     MatSidenavModule,
