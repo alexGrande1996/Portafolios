@@ -9,6 +9,16 @@ import { io } from 'socket.io-client';
 })
 export class ChatComponent {
 
+  
+  options = this._formBuilder.group({
+    bottom: 0,
+    fixed: true,
+    top: 0,
+  });
+
+  panelOpenState = false;
+
+
   private mostrarLogin = true;
   private socket;
 
@@ -37,25 +47,24 @@ export class ChatComponent {
 
 
 
-  
+  sendMessage() {
+    const messageInput = this.el.nativeElement.querySelector('#message-input');
+    const messageText = messageInput.value.trim();
+    if (messageText !== '') {
 
+      
 
-  toggleLogin(){
-    const login = this.el.nativeElement.querySelector('.login');
-    const barrera = this.el.nativeElement.querySelector('.barrera');
+        const messageContainer = this.renderer.createElement('div');
 
-    if(this.mostrarLogin){
-      this.renderer.addClass(login,'login-cerrado');
-      this.renderer.addClass(barrera,'closed');
+        messageContainer.className = 'user-message';
+        messageContainer.textContent = messageText;
 
+        const chat = this.el.nativeElement.querySelector('.chat-container');
+        this.renderer.appendChild(chat,messageContainer);
+
+        messageInput.value = '';
     }
-    else{      
-      this.renderer.removeClass(login,'login-cerrado');
-      this.renderer.removeClass(barrera,'closed');
-    }
-    this.mostrarLogin = !this.mostrarLogin;
-  }
-
+}
 
 
 }

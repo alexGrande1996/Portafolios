@@ -1,37 +1,63 @@
 
 
-<!--Chat-->
-<div class="marco">
-  <div class="login login-abierto">
-  
+<mat-sidenav-container class="example-container">
+        
+        
+  <mat-sidenav #sidenav mode="side" closed class="example-sidenav" [fixedInViewport]="options.value.fixed" [fixedTopGap]="options.value.top" [fixedBottomGap]="options.value.bottom">
+      <!-- {{options.value.fixed ? 'Fixed' : 'Non-fixed'}}  -->
+    <div class="marcoInterno">
+      <div class="cajonTitulo"><h1  (click)="sidenav.toggle()">Menu<hr></h1></div>
+      <div class="seciones">
 
-    <div class="titulo"><h1 class="texto">El ultimo escondite</h1></div>
+     
+        
+      </div>
+      <div class="pie" style="background-color: rgb(0, 195, 255); height: 30px;">
+        <span class="info">Asociacion draco</span>
+      </div>
+    </div>
+
+
+
+   
+    
     
 
-    <div class="marco-cajas">
 
-      <div class="usuario">
-        <input type="text" placeholder="Usuario">
-      </div>
       
-      <div class="password">
-        <input type="text" placeholder="Contraseña">
-        <i class="bi bi-eye-fill"></i>
-      </div>
-
-
-    </div>
-
-
-    <div class="boton">
-      <button>Login</button>
-    </div>
-    
-
-  </div>
-  <div class="barrera"></div>
-  <div class="chat"></div>
-  <button class="mostrar" (click)="toggleLogin()">mostrar</button>
+  </mat-sidenav>
 
   
+  <button mat-icon-button color="accent" aria-label="Example icon button with a menu icon" (click)="sidenav.toggle()">
+    <mat-icon>menu</mat-icon>
+</button>
+
+
+<div class="chat-container">
+
+  <div class="message">Bienvenido al chat</div>
+  <div class="user-message">Hola, ¿cómo estás?</div>
+  <div class="message">Estoy bien, ¿y tú?</div>
+  <!-- Más mensajes pueden ir aquí -->
+ 
 </div>
+
+
+
+<div class="marco-texto">
+
+  
+  <div class="input-container">
+
+    <input type="text" id="message-input" placeholder="Escribe tu mensaje">
+    <button (click)="sendMessage()">Enviar</button>
+  
+  </div>
+  
+
+
+</div>
+
+  
+</mat-sidenav-container>
+
