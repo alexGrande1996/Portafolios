@@ -6,10 +6,9 @@ import { ConfiguracionComponent } from './Componentes/configuracion/configuracio
 import { ChatComponent } from './Componentes/chat/chat.component';
 
 const routes: Routes = [
-  {path:"", component:ConfiguracionComponent},
   {path:"login", component:LoginComponent},
   {path:"inicio", component:VistaPrincipalComponent},
-  {path:"chat", component:ChatComponent},
+  {path:"", component:ChatComponent},
   
 ];
 
