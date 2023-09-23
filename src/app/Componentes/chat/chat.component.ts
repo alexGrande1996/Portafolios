@@ -205,14 +205,13 @@ export class ChatComponent {
     const cajaTexto2 = this.el.nativeElement.querySelector('#usuario');
     const cajaTexto3 = this.el.nativeElement.querySelector('#canal');
     
-      const texto = cajaTexto.value.trim(); 
-      const texto2 = cajaTexto2.value.trim();
-      const texto3 = cajaTexto3.value.trim();
+      const mensaje = cajaTexto.value.trim(); 
+      const usuario = cajaTexto2.value.trim();
+      const canal = cajaTexto3.value.trim();
 
 
-      if(texto != '' && texto2 != '' && texto3){
-        
-        this.socket.emit('enviarMensaje',texto,texto2,texto3,this.Hora)
+      if(mensaje != '' && usuario != '' && canal){
+        this.socket.emit('enviarMensaje',mensaje,usuario,canal,this.Hora)
         cajaTexto.value = '';
       }
   }
