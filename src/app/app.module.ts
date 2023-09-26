@@ -24,31 +24,16 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatTreeModule} from '@angular/material/tree';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-
-
-import { VistaPrincipalComponent } from './Componentes/vista-principal/vista-principal.component';
-import { VistaCargaComponent } from './Componentes/vista-carga/vista-carga.component';
-import { VistaGaleriaComponent } from './Componentes/vista-galeria/vista-galeria.component';
-import { VistaComicsComponent } from './Componentes/vista-comics/vista-comics.component';
-import { VistaMangasComponent } from './Componentes/vista-mangas/vista-mangas.component';
-import { VistaEnvioSolicitudComponent } from './Componentes/vista-envio-solicitud/vista-envio-solicitud.component';
-import { ChatComponent } from './Componentes/chat/chat.component';
-import { LoginComponent } from './Componentes/login/login.component';
-import { ConfiguracionComponent } from './Componentes/configuracion/configuracion.component';
+import { BarraNavegacionComponent } from './Componentes/Herramientas/barra-navegacion/barra-navegacion.component';
+import { LoginComponent } from './Componentes/VistasPublicas/login/login.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    VistaPrincipalComponent,
-    VistaCargaComponent,
-    VistaGaleriaComponent,
-    VistaComicsComponent,
-    VistaMangasComponent,
-    VistaEnvioSolicitudComponent,
-    ChatComponent,
+    BarraNavegacionComponent,
     LoginComponent,
-    ConfiguracionComponent
+   
   ],
   imports: [
     MatSidenavModule,

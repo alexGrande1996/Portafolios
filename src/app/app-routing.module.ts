@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { VistaPrincipalComponent } from './Componentes/vista-principal/vista-principal.component';
-import { LoginComponent } from './Componentes/login/login.component';
-import { ConfiguracionComponent } from './Componentes/configuracion/configuracion.component';
-import { ChatComponent } from './Componentes/chat/chat.component';
+import { LoginComponent } from './Componentes/VistasPublicas/login/login.component';
+
+
+
 
 const routes: Routes = [
-  {path:"login", component:LoginComponent},
-  {path:"inicio", component:VistaPrincipalComponent},
-  {path:"", component:ChatComponent},
+  {path:"login",component:LoginComponent}
+  // {path:"login", component:LoginComponent},
+  // {path:"inicio", component:VistaPrincipalComponent},
+  // {path:"", component:ChatComponent},
+  // {path:"loginv2", component:LoginV2Component},
+  // {path:"red", component:RedSocialComponent},
   
 ];
 
