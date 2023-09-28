@@ -26,6 +26,10 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { BarraNavegacionComponent } from './Componentes/Herramientas/barra-navegacion/barra-navegacion.component';
 import { LoginComponent } from './Componentes/VistasPublicas/login/login.component';
+import { InicioComponent } from './Componentes/VistasPublicas/inicio/inicio.component';
+import { NosotrosComponent } from './Componentes/VistasPublicas/nosotros/nosotros.component';
+import { RedesComponent } from './Componentes/VistasPublicas/redes/redes.component';
+import { ServiciosComponent } from './Componentes/VistasPublicas/servicios/servicios.component';
 
 
 @NgModule({
@@ -33,6 +37,10 @@ import { LoginComponent } from './Componentes/VistasPublicas/login/login.compone
     AppComponent,
     BarraNavegacionComponent,
     LoginComponent,
+    InicioComponent,
+    NosotrosComponent,
+    RedesComponent,
+    ServiciosComponent,
    
   ],
   imports: [

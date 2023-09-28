@@ -1,3 +1,203 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
 body{
-    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    width: 100%;
+    background: transparent;
+}
+
+.marco{
+    position: relative;
+    width: 520px;
+    background: transparent;
+    border: 2px solid rgba(225,225,225,0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(1);
+    transition: transform .5s, height .2s ease;
+}
+
+
+
+
+
+.marco.active-popup{
+    transform: scale(1);
+}
+
+.marco.active{
+    //width: 800px;
+    // height: 520px;
+}
+
+.marco .caja {
+    width: 100%;
+    height: 100%;
+    padding: 30px 50px ;
+}
+
+.marco .caja h2{
+    font-size: 2em;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: 'Sedgwick Ave Display', cursive;
+}
+
+
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid black;
+    margin: 30px 0;
+}
+
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    padding-right: 60px;
+}
+
+
+.input-box input::placeholder{
+    color: rgb(0, 0, 0);    
+}
+
+
+
+.input-box .icono{
+    position: absolute;
+    right: 10px;
+    font-size: 1.8em;
+    color: black;
+    line-height: 60px;
+
+}
+
+.input{
+    font-size: 0.9em;
+    right: 10px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-box input:focus-label,
+.input-box input:valid-label
+{
+    top: -7px;
+}
+
+.marco .caja.registro{
+    transition: transform 18s ;
+
+    position: absolute;
+    transition: none;
+    transform: translateX(520px);
+    
+}
+
+.marco.active .caja.registro{
+    transition: transform .18s ;
+    transform: translateX(0);
+    overflow-y: scroll;
+}
+
+
+.marco .caja.login{
+    transform: transfrom .18s ;
+    transform: translateX(0);
+}
+
+.marco.active .caja.login{
+    transition: none;
+    transform: translateX(-520px);
+
+}
+
+.ingat{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+
+
+.btn{
+    width: 100%;
+    height: 45px;
+    background: rgb(29, 4, 97);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    color: white;
+    font-weight: 500;
+
+
+}
+
+
+.login-register{
+    font-size: 0.9rem;
+    color: rgb(29, 4, 97);
+    text-align: center;
+    font-weight: 500;
+    margin:  25px 0 10px;
+}
+
+.login-register p a{
+    color:rgb(29, 4, 97);
+    text-decoration:none;
+    font-weight: 500;
+}
+
+.login-register p a:hover{
+    text-decoration:underline;
+}
+
+
+.atras{
+    font-size: 2em;
+    position: absolute;
+    z-index: 99;
+    top: 15px;
+    left: 15px;
+    transform: scale(0);
+
+}
+.atras.active{
+    transform: scale(1);
 }

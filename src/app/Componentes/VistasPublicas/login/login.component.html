@@ -1,4 +1,89 @@
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+
+</head>
+
 <app-barra-navegacion> </app-barra-navegacion>
+<body>
+    <div class="marco">
+        <i class="login-link atras bi bi-arrow-left-circle-fill"></i>
 
 
-<p>login works!</p>
+        <div class="caja login">
+            <h2>Inicio de sesion</h2>
+            <form action="/">
+
+                <div class="input-box">
+                    <i class="icono bi bi-person-fill"></i>
+                    <input id="usuario" type="text" placeholder="Usuario:" required>
+                </div>
+
+                <div class="input-box">
+                    <i (click)="toggleIconoContraLogin()" id="icono-ojo" class="icono bi bi-eye-slash-fill"></i>
+                    <input id="password" class="password"  type="text" placeholder="Contraseña:" required>
+                </div>
+
+                <div class="ingat">
+                    <label ><input type="checkbox" name="" id="">Guardar contraseña.</label>
+                    <a>Olvidates tu contraseña?</a>
+                </div>
+
+                <button type="submit" class="btn">Login</button>
+
+                <div class="login-register">
+                    <p>Necesita registrarse? <a class="register-link">Registro</a></p>
+                </div>
+
+
+
+
+            </form>
+        </div>
+        <div class="caja registro">
+
+            <h2>Registro</h2>
+            <form action="#">
+                
+                <div class="input-box">
+                    <i class="icono bi bi-person-fill"></i>
+                    <input id="usuario" type="text" placeholder="Usuario:" required>
+                </div>
+
+                <div class="input-box">
+                    <i (click)="toggleIconoContraRegistro()" id="mostrar-contraseña" class="icono bi bi-eye-slash-fill"></i>
+                    <input id="contraseña"  type="password" placeholder="Contraseña:" required>
+                </div>
+
+                <div class="input-box">
+                    <i class="icono bi bi-person-fill"></i>
+                    <input id="nombre" type="text" placeholder="Nombre:" required>
+                </div>
+
+                <div class="input-box">
+                    <i class="icono bi bi-person-fill"></i>
+                    <input id="Telefono" type="tel" placeholder="Telefono:" required>
+                </div>
+
+                <div class="input-box">
+                    <i class="icono bi bi-person-fill"></i>
+                    <input id="correo" type="text" placeholder="Correo:" required>
+                </div>
+
+                
+                <button type="submit" class="btn" value="enviar">Registro</button>
+                <!-- <div class="login-register">
+                    <p>Quieres volver al inicio?<a class="login-link">Inicio</a></p>
+                </div> -->
+            
+
+            </form>
+
+        </div>
+        
+    </div>
+    
+
+</body>
