@@ -30,6 +30,7 @@ import { InicioComponent } from './Componentes/VistasPublicas/inicio/inicio.comp
 import { NosotrosComponent } from './Componentes/VistasPublicas/nosotros/nosotros.component';
 import { RedesComponent } from './Componentes/VistasPublicas/redes/redes.component';
 import { ServiciosComponent } from './Componentes/VistasPublicas/servicios/servicios.component';
+import { CarruselComponent } from './Componentes/Herramientas/carrusel/carrusel.component';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { ServiciosComponent } from './Componentes/VistasPublicas/servicios/servi
     NosotrosComponent,
     RedesComponent,
     ServiciosComponent,
+    CarruselComponent,
    
   ],
   imports: [

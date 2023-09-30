@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./inicio.component.scss']
 })
 export class InicioComponent {
+  info = ["Alejandro","Lozano","Orduña"];
+  contador = 0;
 
+
+
+  sumas(){
+    this.info[0] = (this.contador++).toString();
+  }
+
+
+  
 }

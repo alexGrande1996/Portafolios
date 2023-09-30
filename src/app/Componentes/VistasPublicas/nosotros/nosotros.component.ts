@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./nosotros.component.scss']
 })
 export class NosotrosComponent {
-
+  info = [
+          {url:"https://cynoteck.com/wp-content/uploads/2022/02/Interfaces-in-Typescript.jpg",titulo:"HOla como estas",descripcion:"Nos vemos"}
+        ]
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-barra-navegacion',
@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./barra-navegacion.component.scss']
 })
 export class BarraNavegacionComponent {
+  @Input() data: any = [];
+
 
 }
