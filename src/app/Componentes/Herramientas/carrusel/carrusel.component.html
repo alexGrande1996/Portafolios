@@ -1,7 +1,7 @@
     
   <body>
         
-    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel" style="width: 500px; height: auto;">
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
             
             
             <div class="carousel-indicators">
@@ -14,8 +14,8 @@
 
 
             <div class="carousel-inner">
-            
-                <div id="dia1" class="diapositiva carousel-item active" data-bs-interval="10000">
+                <!-- data-bs-interval="10000" -->
+                <div id="dia1" class="diapositiva carousel-item active" >
 
                     <img src="{{data[0].url}}" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
@@ -25,7 +25,7 @@
 
                 </div>
 
-                <div id="dia2" class="desactivar diapositiva carousel-item">
+                <div id="dia2" class=" diapositiva carousel-item">
 
                     <img src="{{data[1].url}}" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
@@ -34,8 +34,8 @@
                     </div>
                 </div>
 
-                
-                <div id="dia3" class="desactivar diapositiva carousel-item" data-bs-interval="2000">
+                <!-- data-bs-interval="2000" -->
+                <div id="dia3" class=" diapositiva carousel-item" >
 
                     <img src="{{data[2].url}}" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
@@ -48,27 +48,6 @@
                 </div>
 
 
-                <div id="dia4" class="desactivar diapositiva carousel-item">
-
-
-                    <img src="{{data[3].url}}" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                    <h5>{{data[0].titulo}}</h5>
-                    <p>{{data[3].descripcion}}</p>
-                    </div>
-
-                </div>
-
-                <div  id="dia5" class="desactivar diapositiva carousel-item">
-                   
-                    <img src="{{data[4].url}}" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                    <h5>{{data[4].titulo}}</h5>
-                    <p>{{data[4].descripcion}}</p>
-                    </div>
-
-                </div>
-
             </div>
 
 
@@ -78,8 +57,8 @@
             </button>
 
             <button id="derecha" class="desactivar carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
             </button>
 
 

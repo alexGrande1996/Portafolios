@@ -25,39 +25,62 @@ export class CarruselComponent {
   ngAfterViewInit(){
       const imagenes = this.data.length;
 
+
+      //Activar los botones para poder movernos 
       if(imagenes > 1){
+        const btnIzq = this.el.nativeElement.querySelector('#izquierda');
+        this.renderer.removeClass(btnIzq,'desactivar');
+        const btnDer = this.el.nativeElement.querySelector('#derecha');
+        this.renderer.removeClass(btnDer,'desactivar');
+      }
+
+      for (let a = 1; a < this.data.length; a++) {
+        const element = this.data[a];
+        this.cargarComponentesImagenes(element.url,element.titulo,element.descripcion);
         
       }
-
-      if(imagenes > 0){
-        const bt1 = this.el.nativeElement.querySelect('#btn1');
-        const dia1 = this.el.nativeElement.querySelect('#dia1');
-      }
-
-      if(imagenes > 1){
-        const bt1 = this.el.nativeElement.querySelect('#btn2');
-        const dia1 = this.el.nativeElement.querySelect('#dia2');
-      }
-
-      if(imagenes > 2){
-        const bt1 = this.el.nativeElement.querySelect('#btn3');
-        const dia1 = this.el.nativeElement.querySelect('#dia3');
-      }
-
-      if(imagenes > 3){
-        const bt1 = this.el.nativeElement.querySelect('#btn4');
-        const dia1 = this.el.nativeElement.querySelect('#dia4');
-      }
-
-      if(imagenes > 4){
-        const bt1 = this.el.nativeElement.querySelect('#btn5');
-        const dia1 = this.el.nativeElement.querySelect('#dia5');
-      }
-
-  
+    
   }
 
+  cargarComponentesImagenes(url:string,titulo:string,texto:string){
+    
+    const div = this.renderer.createElement('div');
+    
+    this.renderer.addClass(div,'diapositiva');
+    this.renderer.addClass(div,'carousel-item');
+    this.renderer.addClass(div,'active');
 
+    const img = this.renderer.createElement('img');
+    this.renderer.setAttribute(img,"src",url);
+
+    this.renderer.addClass(img,'d-block');
+    this.renderer.addClass(img,'w-100');
+
+    const descripcion = this.renderer.createElement('div')
+
+    this.renderer.addClass(descripcion,'carousel-caption');
+    this.renderer.addClass(descripcion,'d-none');
+    this.renderer.addClass(descripcion,'d-md-block');
+
+    const h5 = this.renderer.createElement('h5');
+    const p = this.renderer.createElement('p');
+
+    h5.textContent = titulo;
+    p.textContent = texto;
+
+    this.renderer.appendChild(descripcion,h5);
+    this.renderer.appendChild(descripcion,p);
+
+
+    this.renderer.appendChild(div,img);
+    this.renderer.appendChild(div,descripcion);
+
+
+    const imagenes = this.el.nativeElement.querySelector('#imagenes');
+
+    this.renderer.appendChild(imagenes,div);
+
+  }
 
 
 }
